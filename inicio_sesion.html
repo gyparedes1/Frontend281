@@ -48,26 +48,78 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="m-0">NoMasViolencia</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
+              <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0">NoMasViolencia</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                  <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                  <a href="index.html" class="nav-item nav-link">Aprende</a>
+                  <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Recursos</a>
+                    <div class="dropdown-menu m-0">
+                      <a href="index.html" class="dropdown-item">Noticias</a>
+                      <a href="index.html" class="dropdown-item">Eventos</a>
+                      <a href="index.html" class="dropdown-item">Articulos</a>
+                      <a href="index.html" class="dropdown-item">Posts</a>
+                      <a href="index.html" class="dropdown-item">Otros</a>
+                    </div>
+                  </div>
+                  <a href="denuncia.html" class="nav-item nav-link">Denuncias</a>
+                  <a href="contacto.html" class="nav-item nav-link" id="a-contacto" style="display: none;">Contactos</a>
+                  <a href="index.html" class="nav-item nav-link">Politicas</a>
+                </div>
+                <div class="navbar-nav ms-auto" id="btnRegInicio">
+                  <a href="registro.html" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Registro</a>
+                  <a href="inicio_sesion.html" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Inicio
+                    Sesion</a>
+                </div>
+                <div class="navbar-nav ms-auto" style="display: none;" id="correoUsuario">
+                  <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                      <span class="d-none d-md-block dropdown-toggle ps-2 nomUsuario" id="spanCorreo">nombreAdministrador</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                      <li class="dropdown-header">
+                        <h6 id = "h6nomUsuario">nomUsuario</h6>
+                        
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                          <i class="bi bi-person"></i>
+                          <span>Mi Perfil</span>
+                        </a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+      
+                      <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" id="cerrar_sesion">
+                          <i class="bi bi-box-arrow-right"></i>
+                          <span>Cerrar Sesión</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </div>
+              </div>
             </nav>
+          </div>
 
-
-        </div>
         <div class="container-xxl bg-primary page-header">
             <div class="container text-center">
                 <h1 class="text-white animated zoomIn mb-3">Inicia Sesión</h1>
 
             </div>
         </div>
-
-
-
 
         <div class="row justify-content-center">
 
@@ -77,25 +129,26 @@
 
                         <h3>Inicio Sesion</h3>
                     </div>
-                    <div class="form-floating mb-3" id="inicio-sesion">
-                        <input type="email" class="form-control" id="correo" placeholder="name@example.com">
-                        <label for="floatingInput">Correo Electrónico</label>
-                    </div>
-                    <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="contrasenia" placeholder="Password">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <!--<div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>-->
-                        <a href="">Olvidaste tu Contraseña?</a>
-                    </div>
-                    <!--<button type="submit" class="btn btn-primary py-3 w-100 mb-4" >Iniciar</button> -->
-                    <a href="indexUsr.html" class="btn btn-primary py-3 w-100 mb-4">Iniciar</a>
+                    <form action="" id="form-inicioSesion">
 
-                    <p class="text-center mb-0">No tienes una cuenta? <a href="registro.html">Registrate</a></p>
+                        <div class="form-floating mb-3" id="inicio-sesion">
+                            <input type="email" class="form-control" id="input-correo" placeholder="name@example.com">
+                            <label for="input-correo">Correo Electrónico</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="input-contrasenia" placeholder="Password">
+                            <label for="input-contrasenia">Contraseña</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <!--<div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>-->
+                            <a href="">Olvidaste tu Contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar</button>
+                        <p class="text-center mb-0">No tienes una cuenta? <a href="registro.html">Registrate</a></p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -124,7 +177,7 @@
                         <a class="btn btn-link" href="">Quienes somos</a>
                         <a class="btn btn-link" href="">Mision</a>
                         <a class="btn btn-link" href="">Vision</a>
-                        <a class="btn btn-link" href="TermYCond.html">Politicas de Privacidad</a>
+                        <a class="btn btn-link" href="">Politicas de Privacidad</a>
 
                     </div>
                     <div class="col-md-6 col-lg-3">
@@ -200,6 +253,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/scriptInicioSesion.js"></script>
 </body>
 
 </html>
